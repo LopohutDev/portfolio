@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Fade from "react-reveal/Fade";
+import Message from "./Message";
 
 function GetInTouch() {
   const [name, setName] = useState("");
@@ -7,19 +8,33 @@ function GetInTouch() {
   const [phone, setPhone] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [newMessage, setNewMessage] = useState(false);
+  const [popUpMessage, setPopUpMessage] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name);
-    console.log(email);
-    console.log(phone);
-    console.log(subject);
-    console.log(message);
-    alert(
-      "Thank You For Submitting your Contact Info, You will recieve an Email in a few days"
-    );
+    setPopUpMessage([
+      {
+        name,
+        email,
+        phone,
+        subject,
+        message,
+      },
+    ]);
+
+    setName("");
+    setEmail("");
+    setPhone("");
+    setSubject("");
+    setMessage("");
   };
   return (
-    <div>
+    <div className="">
+      <Message
+        newMessage={newMessage}
+        setNewMessage={setNewMessage}
+        popUpMessage={popUpMessage}
+      />
       <Fade cascade>
         <div className="flex flex-col items-center justify-center h-32 p-5 mt-10">
           <h1 className="text-4xl font-bold lg:text-6xl">GET IN TOUCH.</h1>
@@ -75,7 +90,11 @@ function GetInTouch() {
               placeholder="Message"
               className="w-full p-3 mt-3 text-xs text-gray-400 bg-black border focus:outline-none lg:mb-10 rounded-xl input"
             ></textarea>
-            <button type="submit" className="w-32 h-10 btn2 rounded-xl">
+            <button
+              type="submit"
+              onClick={() => setNewMessage(!newMessage)}
+              className="w-32 h-10 btn2 rounded-xl"
+            >
               Submit
             </button>
           </div>

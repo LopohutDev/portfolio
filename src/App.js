@@ -1,19 +1,20 @@
 import { Route, Switch } from "react-router-dom";
+
+// Styles
 import "./App.css";
+import "./styles/main.css";
+
+// components
 import About from "./components/About";
 import Home from "./components/Home";
 import Footer from "./components/layers/Footer";
-import "./styles/main.css";
 import Navbar from "./components/layers/Navbar";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import TodoPage from "./projects/TodoList/TodoPage";
-
-// import Chat from "./projects/chat/Chat";
-
 function App() {
   return (
-    <div className="w-full">
+    <div className="relative w-full ">
       <Navbar />
       {/* <Chat /> */}
       <div className="w-full h-16"></div>
