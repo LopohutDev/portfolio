@@ -62,18 +62,18 @@ function Navbar() {
             </svg>
           </div>
           <div className="hidden mx-8 lg:mx-20 lg:block">
-            <button className="btn">
-              <Link to="/">Home</Link>
-            </button>
-            <button className="btn">
-              <Link to="/about">About</Link>
-            </button>
-            <button className="btn">
-              <Link to="/work">Work</Link>
-            </button>
-            <button className="btn">
-              <Link to="/contact">Contact</Link>
-            </button>
+            <Link to="/">
+              <button className="btn">Home</button>
+            </Link>
+            <Link to="/about">
+              <button className="btn">About</button>
+            </Link>
+            <Link to="/work">
+              <button className="btn">Work</button>
+            </Link>
+            <Link to="/contact">
+              <button className="btn">Contact</button>
+            </Link>
           </div>
         </nav>
         <div className={clickStyle(click)}>

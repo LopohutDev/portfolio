@@ -1,14 +1,6 @@
 import React from "react";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel";
+import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import shopee2 from "../../../images/shopee2.jfif";
-import shopee3 from "../../../images/shopee3.jfif";
 
 function HeaderImage() {
   return (
@@ -31,10 +23,18 @@ function HeaderImage() {
               />
             </Slide>
             <Slide index={1}>
-              <img className="w-full h-full rounded" src={shopee2} alt="lmao" />
+              <img
+                className="w-full h-full rounded"
+                src="https://cf.shopee.ph/file/ee23405983ad8407e4b5bbac05ca4f7e_xxhdpi"
+                alt="lmao"
+              />
             </Slide>
             <Slide index={2}>
-              <img className="w-full h-full rounded" src={shopee3} alt="lmao" />
+              <img
+                className="w-full h-full rounded"
+                src="https://cf.shopee.ph/file/ee23405983ad8407e4b5bbac05ca4f7e_xxhdpi"
+                alt="lmao"
+              />
             </Slide>
           </Slider>
         </CarouselProvider>

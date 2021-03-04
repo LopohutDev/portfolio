@@ -6,7 +6,7 @@ import photo from "../images/Louie.png";
 
 function About() {
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-gray-200">
+    <div className="flex flex-col items-center justify-center w-full bg-gray-200 lg:h-screen">
       <Zoom>
         <h1 className="mt-20 mb-16 text-5xl font-bold lg:text-7xl">
           About Me.

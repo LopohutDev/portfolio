@@ -1,18 +1,24 @@
 import React from "react";
 import "../styles/custom.css";
 import { Route, Switch, Link } from "react-router-dom";
+
+//components
 import TodoPage from "../projects/TodoList/TodoPage";
 import LoginPage from "../projects/LoginPage/LoginPage";
 import Shopee from "../projects/Shopee/pages/DashBoard";
 import DashBoard from "../projects/DashBoard/DashBoard";
 import Hackreactor from "../projects/Hackreactor/Hackreactor";
 import Twitter from "../projects/Twitter/Twitter";
+
+//images
 import Shopeeimg from "../images/Shopee2.png";
 import Hackreactorimg from "../images/HackReactor.png";
 import Dashboardimg from "../images/Dashboard.png";
 import TodoImg from "../images/Todo List.png";
 import Twitterimg from "../images/twitter.png";
 import Loginimg from "../images/login.png";
+
+//react-reveal
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 
@@ -24,6 +30,7 @@ function Work({ match }) {
         <Route path={match.url + "/dashboard"} component={DashBoard} />
         <Route path={match.url + "/hackreactor"} component={Hackreactor} />
         <Route path={match.url + "/loginpage"} component={LoginPage} />
+        <Route path={match.url + "/shopee"} component={Shopee} />
         <Route path={match.url + "/shopee"} component={Shopee} />
         <Route path={match.url + "/twitter"} component={Twitter} />
         <Route
