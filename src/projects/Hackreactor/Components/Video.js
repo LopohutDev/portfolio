@@ -25,6 +25,7 @@ function Video() {
         </div>
         <div className="lg:w-11/12 ">
           <iframe
+            title="Hackreactor Video"
             src="https://player.vimeo.com/video/329678340"
             className="w-full h-full"
           />
