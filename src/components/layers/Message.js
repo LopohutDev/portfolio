@@ -3,9 +3,9 @@ import { GrClose } from "react-icons/gr";
 
 function Message({ newMessage, setNewMessage, popUpMessage }) {
   return newMessage ? (
-    <div className="absolute top-0 z-20 flex items-center justify-center w-full h-full text-black lg:p-96 p-5 ">
+    <div className="absolute top-0 z-20 flex items-center justify-center w-full h-full p-5 text-black lg:p-96 ">
       <div className="absolute w-full h-full bg-gray-500 opacity-40"></div>
-      <div className="relative z-30 w-full p-10 bg-gray-200  rounded-3xl h-96">
+      <div className="relative z-30 w-full p-10 break-words bg-gray-200 rounded-3xl h-96">
         <button
           onClick={() => {
             setNewMessage(!newMessage);
@@ -19,19 +19,22 @@ function Message({ newMessage, setNewMessage, popUpMessage }) {
             <h3 className="my-2 text-xl lg:text-2xl">
               Hello,<span className="font-semibold"> {name}</span>
             </h3>
-            <p className="my-2 lg:text-base text-sm">
+            <p className="my-2 text-sm lg:text-base">
               Email:<span className="font-semibold"> {email}</span>
             </p>
-            <p className="my-2 lg:text-base text-sm">
+            <p className="my-2 text-sm lg:text-base">
               Mobile Number:<span className="font-semibold"> {phone}</span>{" "}
             </p>
-            <p className="my-2 lg:text-base text-sm">
+            <p className="my-2 text-sm lg:text-base">
               Subject: <span className="font-semibold"> {subject}</span>
             </p>
             <div>
-              <p className="my-2 lg:text-base text-sm">Message: </p>
-              <p>{message}</p>
+              <p className="my-2 text-sm lg:text-base">Message: </p>
+              <p className="flex flex-1 ">{message}</p>
             </div>
+            <p className="mt-10 text-xs font-semibold lg:text-base">
+              This Feature is under Development
+            </p>
           </div>
         ))}
       </div>
