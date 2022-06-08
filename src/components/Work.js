@@ -31,7 +31,6 @@ function Work({ match }) {
         <Route path={match.url + "/hackreactor"} component={Hackreactor} />
         <Route path={match.url + "/loginpage"} component={LoginPage} />
         <Route path={match.url + "/shopee"} component={Shopee} />
-        <Route path={match.url + "/shopee"} component={Shopee} />
         <Route path={match.url + "/twitter"} component={Twitter} />
         <Route
           path={match.url + "/"}
